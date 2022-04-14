@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace RISHI_HHT_APP.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage//test
+	public partial class HomePage : ContentPage//test123
 	{
         public HomePage()
         {
