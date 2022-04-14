@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RISHI_HHT_APP.Pages.Inspection" LayoutChanged="ContentPage_LayoutChanged" BackgroundImage="Background.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="0,0,0,0">
+                <Label x:Name="ProcessName" Text="INSPECTION PROCESS" TextColor="Red" FontSize="25"  TextDecorations="Underline" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+       
+            <Frame Padding="15" BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,25,10,0">
+                <Grid  HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="330"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Label  Text="INPUT" TextColor="Blue" FontSize="20" Grid.Row="0" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+                    <Entry Completed="TxtMachine_Completed" FontAttributes="Bold" x:Name="txtMachine" Placeholder="SCAN MACHINE"  Grid.Row="1"   BackgroundColor="Transparent"  ></Entry>
+                    <Entry Completed="TxtJamboRoll_Completed" FontAttributes="Bold" x:Name="txtJamboRoll" Placeholder="SCAN JAMBO ROLL CARD"  Grid.Row="2"   BackgroundColor="Transparent"  ></Entry>
+                    <Entry FontAttributes="Bold" x:Name="txtWO" Placeholder="WORK ORDER"  Grid.Row="3"   BackgroundColor="Transparent"  ></Entry>
+
+                </Grid>
+            </Frame>
+            <Frame Padding="15" BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,0,10,0">
+                <Grid  HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="330"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition   Height="45"></RowDefinition>
+                        <RowDefinition   Height="45"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Label  Text="OUTPUT" TextColor="Blue" FontSize="20" Grid.Row="0" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+                    <Picker  FontAttributes="Bold" x:Name="pklCustCode" Title="SELECT CUSTOMER CODE" Grid.Row="1" Grid.Column="0"  BackgroundColor="Transparent" ></Picker>
+                    <Picker FontAttributes="Bold" x:Name="pklOutPutWONo" Title="SELECT WORK ORDER NO" Grid.Row="2" Grid.Column="0"  BackgroundColor="Transparent" ></Picker>
+                    <Entry FontAttributes="Bold" x:Name="txtLen" Placeholder="ENTER ROOL LENGTH"  Grid.Row="3"   BackgroundColor="Transparent"  ></Entry>
+                </Grid>
+            </Frame>
+           
+            <Grid Margin="0,0,0,15" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="ImgPrint" Grid.Column="0" Grid.Row="0"  Clicked="ImgPrint_Clicked" BackgroundColor="Transparent" Source="Printer.png"  Aspect="Fill" ></ImageButton>
+                <ImageButton x:Name="ImgShortPrint" Grid.Column="1" Grid.Row="0"  Clicked="ImgShortPrint_Clicked" BackgroundColor="Transparent" Source="Short_Print.png"  Aspect="Fill" ></ImageButton>
+                <ImageButton x:Name="imgBack" Grid.Column="2" Grid.Row="0"  Clicked="ImgBack_Clicked" BackgroundColor="Transparent" Source="Back.png"  Aspect="Fill" ></ImageButton>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

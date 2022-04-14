@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RISHI_HHT_APP.Pages.Warping" LayoutChanged="ContentPage_LayoutChanged" BackgroundImage="Background.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="0,0,0,0" >
+                <Label x:Name="ProcessName" Text="WARPING PROCESS" TextColor="Red" FontSize="25" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" TextDecorations="Underline" FontAttributes="Bold"  ></Label>
+            </Grid>
+            <Frame  BackgroundColor="White" BorderColor="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,0,10,0">
+                <Grid HeightRequest="170" HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label  Text="INPUT" TextColor="Blue" FontSize="20" Grid.Row="0" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,-20,0,0"></Label>
+                    <Picker SelectedIndexChanged="PklWONo_SelectedIndexChanged" FontAttributes="Bold"  x:Name="pklWONo" Title="SELECT WORK ORDER NO" Grid.Row="1"  BackgroundColor="Transparent" ></Picker>
+                    <Entry Completed="TxtMachine_Completed" FontAttributes="Bold" x:Name="txtMachine" Placeholder="SCAN MACHINE"  Grid.Row="2"  BackgroundColor="Transparent"  ></Entry>
+                    <Entry Completed="TxtScanbobbin_Completed" FontAttributes="Bold" x:Name="txtScanbobbin" Placeholder="SCAN BOBBIN TROLLEY CARD"  Grid.Row="3"  BackgroundColor="Transparent"  ></Entry>
+                    <Entry Completed="Entry_Completed" FontAttributes="Bold" x:Name="txtNoOfBobbins" Placeholder="CHECK NO OF BOBBIN"  Grid.Row="4"  BackgroundColor="Transparent"  ></Entry>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="White" BorderColor="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,0,10,10">
+                <Grid HeightRequest="215" HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition   Height="40"></RowDefinition>
+                        <RowDefinition   Height="40"></RowDefinition>
+                        <RowDefinition   Height="40"></RowDefinition>
+                        <RowDefinition   Height="40"></RowDefinition>
+                        <RowDefinition   Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label  Text="OUTPUT" TextColor="Blue" FontSize="20" Grid.Row="0" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,-20,0,0" ></Label>
+                    <Picker SelectedIndexChanged="PklOutPutWONo_SelectedIndexChanged" FontAttributes="Bold" x:Name="pklOutPutWONo" Title="SELECT WORK ORDER NO" Grid.Row="1"  BackgroundColor="Transparent" ></Picker>
+                    <Entry Completed="TxtBeamAsset_Completed" FontAttributes="Bold" x:Name="txtBeamAsset" Placeholder="SCAN BEAM ASSET" Grid.Row="2"   BackgroundColor="Transparent" ></Entry>
+                    <Entry Completed="TxtWidth_Completed" FontAttributes="Bold" x:Name="txtWidth" Placeholder="ENTER WIDTH"  Grid.Row="3"  BackgroundColor="Transparent"  ></Entry>
+                    <Entry Completed="TxtLenth_Completed" FontAttributes="Bold" x:Name="txtLenth"  Placeholder="ENTER LENGTH" Grid.Row="4"  BackgroundColor="Transparent"  ></Entry>
+                    <Entry Completed="TxtEnds_Completed" FontAttributes="Bold" x:Name="txtEnds" Placeholder="ENTER NO OF ENDS" Grid.Row="5"  BackgroundColor="Transparent"  ></Entry>
+                </Grid>
+            </Frame>
+
+            <Grid Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="imgPrint" Grid.Column="0" Grid.Row="0"  Clicked="ImgPrint_Clicked" BackgroundColor="Transparent" Source="Printer.png"  Aspect="Fill" ></ImageButton>
+                <ImageButton x:Name="imgBack" Grid.Column="1" Grid.Row="0"  Clicked="ImgBack_Clicked" BackgroundColor="Transparent" Source="Back.png"  Aspect="Fill" Margin="0,0,0,10"></ImageButton>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

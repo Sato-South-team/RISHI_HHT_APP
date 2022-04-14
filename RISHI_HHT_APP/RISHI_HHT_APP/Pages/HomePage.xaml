@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RISHI_HHT_APP.Pages.HomePage" BackgroundImage="Background.jpg" LayoutChanged="ContentPage_LayoutChanged">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                <Image  x:Name="RishiLogo" Source="RishiLogo.png"  Aspect="AspectFit" WidthRequest="400"  HeightRequest="100"  ></Image>
+            </Grid>
+            <Grid Margin="0,20,0,0">
+                <Label Text="HOME PAGE" TextColor="Red" FontSize="35"  TextDecorations="Underline" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+          
+            <Frame Padding="15" BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,95,10,0">
+                <Grid >
+                    <Picker x:Name="pklProcess" WidthRequest="300" BackgroundColor="White" TextColor="Blue" FontSize="25"   Title="SELECT PROCESS."  FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                    </Picker>
+                </Grid>
+            </Frame>
+            <Grid HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="imgNext" Grid.Row="0" Grid.Column="0"  BackgroundColor="Transparent" Clicked="ImgNext_Clicked"  Source="Next.png" Aspect="Fill" ></ImageButton>
+                <ImageButton x:Name="imgBack"  Grid.Row="0" Grid.Column="2"  Clicked="ImgBack_Clicked" BackgroundColor="Transparent" Source="Back.png"  Aspect="Fill" ></ImageButton>
+            </Grid>
+            <Grid VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                <Image  x:Name="Logo" Source="Logo.png"  Aspect="AspectFit" WidthRequest="150"  HeightRequest="60"  ></Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

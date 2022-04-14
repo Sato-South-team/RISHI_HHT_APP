@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RISHI_HHT_APP.Pages.Tracking" BackgroundImage="Background.jpg" >
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="0,10,0,0">
+                <Label x:Name="ProcessName" Text="PROCESS TRACKING" TextColor="Red" FontSize="25"  TextDecorations="Underline" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+            <Frame Padding="15" BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,45,10,0">
+                <Grid  x:Name="Grd" HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="330"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="60"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Entry FontAttributes="Bold" x:Name="txtBarcode" Placeholder="SCAN PROCESS BARCODE"  Grid.Row="0"   BackgroundColor="Transparent"  ></Entry>
+                    <ListView x:Name="lstView" Grid.Row="1"></ListView>
+                </Grid>
+            </Frame>
+            <Grid Margin="0,0,0,15" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="imgBack"  Grid.Row="0" Grid.Column="0"  Clicked="ImgBack_Clicked" BackgroundColor="Transparent" Source="Back.png"  Aspect="Fill" ></ImageButton>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
