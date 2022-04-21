@@ -192,12 +192,18 @@ namespace RISHI_HHT_APP.Pages
             {
                 if (this.pklWONo.SelectedIndex <= -1)
                     return;
+
+                DoffID = "";
                 for (int index = 0; index < this.ds.Tables[0].Rows.Count; ++index)
                 {
                     if (this.pklWONo.SelectedItem.ToString() == this.ds.Tables[0].Rows[index]["WorkOrderno"].ToString())
                     {
-                        this.DoffID = this.ds.Tables[0].Rows[index]["DoffNos"].ToString();
-                        break;
+                        if(DoffID!="")
+                        this.DoffID = DoffID+"/"+ this.ds.Tables[0].Rows[index]["DoffNos"].ToString();
+                        else
+                            this.DoffID =  this.ds.Tables[0].Rows[index]["DoffNos"].ToString();
+
+                        //  break;
                     }
                 }
                 this.txtMachine.Focus();
@@ -227,7 +233,7 @@ namespace RISHI_HHT_APP.Pages
                 if (this.txtScanbobbin.Text != "")
                 {
                     this.txtNoOfBobbins.Text = this.txtScanbobbin.Text.Split('|')[1].ToString();
-                    if (!this.txtScanbobbin.Text.Split('|')[2].ToString().Contains(this.DoffID))
+                    if (!DoffID.Contains(this.txtScanbobbin.Text.Split('|')[2].ToString()))
                         CommonMethod.ToastMsg("DOFF NO IS NOT MATCHING", "Error");
                 }
                 this.txtNoOfBobbins.Focus();
